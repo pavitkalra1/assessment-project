@@ -83,7 +83,7 @@ p {
 
 
 
-
+/*heading animation*/
 .heading {
   position: relative;
   right: -113px;
@@ -140,6 +140,8 @@ p {
 }
 
 
+/* image position styling */
+
 .s3img {
   position: absolute;
   top: 387px;
@@ -189,7 +191,7 @@ p {
 }
 
 
-/*Side navbar fist page*/
+/*Side navbar*/
 
 .sidenav {
   height: 100%;
@@ -269,6 +271,8 @@ html{
 }
 
 /* About me page button styling*/
+
+
 .glow-on-hover {
   width: 300px;
   height: 80px;
@@ -350,7 +354,7 @@ html{
   }
 }
 
-
+/*social media icons about me page*/
 
 .fa {
   padding: 10px;
@@ -375,6 +379,7 @@ justify-content: space-evenly;
   background: #007bb5;
   color: white;
 }
+
 
 
 

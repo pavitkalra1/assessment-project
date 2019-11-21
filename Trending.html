@@ -6,10 +6,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  
   <script language="JavaScript" type="text/javascript" >
    
    
-//1st endpoint*******   
+
 var text="http://image.tmdb.org/t/p/w185/";
 var settings = {
 
@@ -51,7 +53,7 @@ $.ajax(settings).done(function (response) {
   document.getElementById("rate4").innerHTML="IMDB RATING: " +response .results[3].vote_average;
 
 });
-//end of 1st endpoint******
+
 
 
 function openNav() {
