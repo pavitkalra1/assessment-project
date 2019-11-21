@@ -1,0 +1,113 @@
+<title>Upcoming Movies</title>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script language="JavaScript" type="text/javascript" >
+
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.themoviedb.org/3/movie/upcoming?page=1&language=en-US&api_key=999ab887b2bbe82412ff81f449b32c8f",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
+}
+var text="http://image.tmdb.org/t/p/w185/";
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+
+  document.getElementById("name1111").innerHTML=response .results[1].title;
+  document.getElementById("img1111").src=text+response .results[1].poster_path;
+  document.getElementById("desc1111").innerHTML="Description:" +'<br/>'+response .results[1].overview;
+  document.getElementById("rate1111").innerHTML="Release Date: " +response .results[1].release_date;
+
+  document.getElementById("name2222").innerHTML=response .results[14].title;
+  document.getElementById("img2222").src=text+response .results[14].poster_path;
+  document.getElementById("desc2222").innerHTML="Description:" +'<br/>'+response .results[14].overview;
+  document.getElementById("rate2222").innerHTML="Release Date: " +response .results[14].release_date;
+
+  document.getElementById("name3333").innerHTML=response .results[8].title;
+  document.getElementById("img3333").src=text+response .results[8].poster_path;
+  document.getElementById("desc3333").innerHTML="Description:" +'<br/>'+response .results[8].overview;
+  document.getElementById("rate3333").innerHTML="Release Date: " +response .results[8].release_date;
+
+
+  document.getElementById("name4444").innerHTML=response .results[3].title;
+  document.getElementById("img4444").src=text+response .results[3].poster_path;
+  document.getElementById("desc4444").innerHTML="Description:" +'<br/>'+response .results[3].overview;
+  document.getElementById("rate4444").innerHTML="Release Date: " +response .results[3].release_date;
+
+
+});
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+    </script>
+    <div id="title" class="slide header" style="background-image: url(i7.jpg);">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Main Page</a>
+        <a href="Toprated.html">Top Rated Movies</a>
+        <a href="Trending.html">Trending Movies</a>
+        <a href="Nowplaying.html">Now Playing</a>
+        
+      </div>
+      <span style="font-size:30px;cursor:pointer;color: beige;"  onclick="openNav()">&#9776; open</span>
+        <h1  class="heading" style="font-size:175px;">Upcoming Movies</h1>
+       
+      </div>
+      <div id="slide1" class="slide"style="background-image: url(fro.jpg);">
+        <div class="title">
+          <h1 id="name1111"></h1>
+          <p id="desc1111"></p>
+          <p id="rate1111"></p>
+        </div>
+        <img class="s1img" src="fro.jpg">
+        <img class="s1img" id="img1111">
+      </div>
+      
+      <div id="slide2" class="slide"style="background-image: url(gl1.jpg);">
+        <div class="title">
+          <h1 id="name2222"></h1>
+         <p id="desc2222"></p>
+         <p id="rate2222"></p>
+        </div>
+        <img class="s2img" src="gl.jpg">
+        <img class="s2img" id="img2222"> 
+      </div>
+      
+      <div id="slide3" class="slide"style="background-image: url(lc.jpg);">
+        <div class="title">
+          <h1 id="name3333"></h1>
+          <p id="desc3333"></p>
+          <p id="rate3333"></p>
+        </div>
+        <img  class="s3img" src="lc.jpg">
+        <img  class="s3img" id="img3333">
+      </div>
+      
+      
+      <div id="slide4" class="slide"style="background-image: url(ca.jpg);">
+        <div class="title">
+          <h1 id="name4444"></h1>
+          <p id="desc4444"></p>
+          <p id="rate4444"></p>
+        </div>
+        <img class="s4img" src="ca.jpg">
+        <img class="s4img" id="img4444"> 
+      </div>
+      
+      
+    
+      
+ 

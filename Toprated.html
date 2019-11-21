@@ -1,0 +1,115 @@
+<title>Top Rated Movies</title>
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script language="JavaScript" type="text/javascript" >
+  var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.themoviedb.org/3/movie/top_rated?page=1&language=en-US&api_key=999ab887b2bbe82412ff81f449b32c8f",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
+}
+var text="http://image.tmdb.org/t/p/w185/";
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  document.getElementById("name11").innerHTML=response .results[1].title;
+  document.getElementById("img11").src=text+response .results[1].poster_path;
+  document.getElementById("desc11").innerHTML="Description:" +'<br/>'+response .results[1].overview;
+  document.getElementById("rate11").innerHTML="IMDB RATING: " +response .results[1].vote_average;
+
+
+  document.getElementById("name22").innerHTML=response .results[2].title;
+  document.getElementById("img22").src=text+response .results[2].poster_path;
+  document.getElementById("desc22").innerHTML="Description:" +'<br/>'+response .results[2].overview;
+  document.getElementById("rate22").innerHTML="IMDB RATING: " +response .results[2].vote_average;
+
+
+
+  document.getElementById("name33").innerHTML=response .results[12].title;
+  document.getElementById("img33").src=text+response .results[12].poster_path;
+  document.getElementById("desc33").innerHTML="Description:" +'<br/>'+response .results[12].overview;
+  document.getElementById("rate33").innerHTML="IMDB RATING: " +response .results[12].vote_average;
+
+
+  document.getElementById("name44").innerHTML=response .results[13].title;
+  document.getElementById("img44").src=text+response .results[13].poster_path;
+  document.getElementById("desc44").innerHTML="Description:" +'<br/>'+response .results[13].overview;
+  document.getElementById("rate44").innerHTML="IMDB RATING: " +response .results[13].vote_average;
+
+
+
+});
+
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+</script>
+<div id="title" class="slide header" style="background-image: url(i4.jpg);">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Main Page</a>
+    <a href="Trending.html">Trending Movies</a>
+    <a href="Nowplaying.html">Now Playing</a>
+    <a href="upcoming.html">Upcoming Movies</a>
+    
+  </div>
+  <span style="font-size:30px;cursor:pointer;color: beige;"  onclick="openNav()">&#9776; open</span>
+    <h1  class="heading" style="font-size:175px;">Top Rated Movies</h1>
+   
+  </div>
+  <div id="slide1" class="slide" style="background-image: url(i8.jpg);">
+    <div class="title">
+      <h1 id="name11"></h1>
+      <p id="desc11"></p>
+      <p id="rate11"></p>
+    </div>
+    <img class="s1img" src="shaw.jpg">
+    <img class="s1img" id="img11">
+  </div>
+  
+  <div id="slide2" class="slide"style="background-image: url(i9.jpg);">
+    <div class="title">
+      <h1 id="name22"></h1>
+     <p id="desc22"></p>
+     <p id="rate22"></p>
+    </div>
+    <img class="s2img" src="god.jpg">
+    <img class="s2img" id="img22"> 
+  </div>
+  
+  <div id="slide3" class="slide" style="background-image: url(fg.jpg);">
+    <div class="title">
+      <h1 id="name33"></h1>
+      <p id="desc33"></p>
+      <p id="rate33"></p>
+    </div>
+    <img  class="s3img" src="fg.jpg">
+    <img  class="s3img" id="img33">
+  </div>
+  
+  
+  <div id="slide4" class="slide"style="background-image: url(i11.jpg);">
+    <div class="title">
+      <h1 id="name44"></h1>
+      <p id="desc44"></p>
+      <p id="rate44"></p>
+    </div>
+    <img class="s4img" src="dark.jpg">
+    <img class="s4img" id="img44"> 
+  </div>
+  
+  
+
+  

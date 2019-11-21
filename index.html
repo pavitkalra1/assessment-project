@@ -1,0 +1,179 @@
+ <html>
+<title>Moviemania</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+<script language="JavaScript" type="text/javascript" >
+   
+   
+  //1st endpoint*******   
+     
+  var settings = {
+  
+    "async": true,
+    "crossDomain": true,
+    "url": "https://api.themoviedb.org/3/trending/all/day?api_key=999ab887b2bbe82412ff81f449b32c8f",
+    "method": "GET",
+    "headers": {},
+    "data": "{}"
+  }
+  var text="http://image.tmdb.org/t/p/w185/";
+  
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+
+    document.getElementById("jpg1").src=text+response .results[1].poster_path;
+    document.getElementById("jpg2").src=text+response .results[3].poster_path;
+  });
+ //end of 1st endpoint*****
+
+
+ //2nd endpoint********
+ var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.themoviedb.org/3/movie/top_rated?page=1&language=en-US&api_key=999ab887b2bbe82412ff81f449b32c8f",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  document.getElementById("jpg4").src=text+response .results[1].poster_path;
+  document.getElementById("jpg3").src=text+response .results[13].poster_path;
+});
+//end of 2nd endpoint******
+
+
+
+//3rd endpoint*******
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://api.themoviedb.org/3/movie/now_playing?page=1&language=en-US&api_key=999ab887b2bbe82412ff81f449b32c8f",
+    "method": "GET",
+    "headers": {},
+    "data": "{}"
+  }
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+
+    document.getElementById("jpg6").src=text+response .results[11].poster_path;
+    document.getElementById("jpg5").src=text+response .results[18].poster_path;
+
+  });
+  //end of 3rd endpoint*****
+
+
+//4th endpoint*****
+
+  var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.themoviedb.org/3/movie/upcoming?page=1&language=en-US&api_key=999ab887b2bbe82412ff81f449b32c8f",
+  "method": "GET",
+  "headers": {},
+  "data": "{}"
+}
+$.ajax(settings).done(function (response) {
+  console.log(response);
+
+  document.getElementById("jpg7").src=text+response .results[14].poster_path;
+  document.getElementById("jpg8").src=text+response .results[8].poster_path;
+
+});
+//end of 4th endpoint*****
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script> 
+  
+  
+<div id="title" class="slide header" style="background-image: url(i1.jpg);">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="Trending.html">Trending Movies</a>
+    <a href="Toprated.html">Top Rated Movies</a>
+    <a href="Nowplaying.html">Now Playing</a>
+    <a href="upcoming.html">Upcoming Movies</a>
+    <a href="#slide5">About Me</a>
+  </div>
+  <span style="font-size:30px;cursor:pointer;color: beige;"  onclick="openNav()">&#9776; open</span>
+  <h1  class="heading" style="font-size:170px;">Moviemania</h1>
+  
+ 
+</div>
+
+
+<div id="slide1" class="slide"style="background-image: url(i5.jpg);" >
+  <div class="title">
+    <h1><b>Trending Movies</b></h1>
+   <a href="Trending.html"> <button class="btn btn-info btn-lg">View Trending Movies</button></a>
+
+  </div>
+  <img class="s1img" id="jpg1">
+  <img class="s1img" id="jpg2">
+</div>
+
+<div id="slide2" class="slide"style="background-image: url(i4.jpg);">
+  <div class="title">
+    <h1><b>Top Rated Movies</b></h1>
+    <a href="Toprated.html"> <button class="btn btn-warning btn-lg">View Trending Movies</button></a>
+  </div>
+  <img class="s2img" id="jpg3">
+  <img class="s2img" id="jpg4"> 
+</div>
+
+<div id="slide3" class="slide"style="background-image: url(i6.jpg);">
+  <div class="title">
+    <h1><b>Now Playing</b></h1>
+    <a href="Nowplaying.html"><button class="btn btn-danger btn-lg">View Now Playing</button></a>
+  </div>
+  <img  class="s3img" id="jpg5">
+  <img  class="s3img" id="jpg6">
+</div>
+<div id="slide4" class="slide" style="background-image: url(i7.jpg);">
+  <div class="title">
+    <h1><b>Upcoming Movies</b></h1>
+    <a href="Upcoming.html"><button class="btn btn-success btn-lg">View Upcoming movies</button></a>
+  </div>
+  <img class="s4img" id="jpg7">
+  <img class="s4img" id="jpg8"> 
+</div>
+
+ <div id="slide5"  class="slide header"style="background-image: url(i10.jpg);">
+  <div class="Adiv">
+    <h1 id="Ahead">About Me</h1>
+    <br>
+    
+    <p style="color: burlywood;">Hey Guys, My name is Pavit Kalra I am interested in IT and everything in its orbit. I recently began to be fascinated by web programming, e.g. developing apps and building websites. I am keen to gain more experience in the field. For this reason, I am looking for a company willing to offer me a placement among their developers. In return, I would offer my full commitment, and be a pleasant and friendly addition to your team.
+      I am therefore currently looking for a job or an internship as a front-end or a back-end developer.</p>
+  <div class="row">
+      <div class="column">
+        <a href="https://github.com/pavitkalra1" class="fa fa-github"></a>
+      </div>
+      <div class="column">
+        <a href="https://www.linkedin.com/in/pavitkalra/" class="fa fa-linkedin"></a>
+      </div>
+  </div>
+    
+    <a href="https://pavitkalra1.github.io."> <button class="glow-on-hover" type="button" style="font-size:20px ;">Click Me To See My Resume Website</button></a>
+   </div>
+   <p style="color: beige;"></p>
+ 
+    
+ </div>
+
+</html>
