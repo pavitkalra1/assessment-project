@@ -110,8 +110,16 @@ p {
 }
 
 #title {
-  background-image: url("https://lorempixel.com/640/480/abstract/6/");
-  z-index:2;
+  background-image: url(i1.jpg);
+widows: 100%;
+height: auto;
+}
+@media only screen and (max-width: 400px) {
+  /* styles for narrow screens */
+  #title
+  {
+    background-image: url(joker.jpg);
+  }
 }
 
 #title h1 {
@@ -246,15 +254,15 @@ html{
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 
-.Adiv {
+.Aboutme {
 	font-family: "Montserrat";
 	text-align: center;
 	color: #FFF;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	height: 100vh;
+	justify-content: flex-start;
+	top: initial;
 	letter-spacing: 1px;
 }
 
@@ -265,7 +273,7 @@ html{
 	-moz-background-clip: text;
 	-webkit-background-clip: text;
 	text-transform: uppercase;
-	font-size: 120px;
+	font-size: 13vw;
 	line-height: .75;
 	margin: 10px 0;
 }
@@ -390,7 +398,7 @@ justify-content: space-evenly;
   padding: 5px;
 }
 
-/* Clearfix (clear floats) */
+
 .row::after {
   content: "";
   clear: both;
