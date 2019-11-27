@@ -1,4 +1,4 @@
- <html>
+<html>
 <title>Moviemania</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,13 +24,12 @@
     "headers": {},
     "data": "{}"
   }
-  var text="http://image.tmdb.org/t/p/w185/";
   
   $.ajax(settings).done(function (response) {
     console.log(response);
 
-    document.getElementById("jpg1").src=text+response .results[1].poster_path;
-    document.getElementById("jpg2").src=text+response .results[3].poster_path;
+    document.getElementById("jpg1").src="http://image.tmdb.org/t/p/w185/"+response .results[1].poster_path;
+    document.getElementById("jpg2").src="http://image.tmdb.org/t/p/w185/"+response .results[3].poster_path;
   });
  //end of 1st endpoint*****
 
@@ -47,8 +46,8 @@
 
 $.ajax(settings).done(function (response) {
   console.log(response);
-  document.getElementById("jpg4").src=text+response .results[1].poster_path;
-  document.getElementById("jpg3").src=text+response .results[13].poster_path;
+  document.getElementById("jpg4").src="http://image.tmdb.org/t/p/w185/"+response .results[1].poster_path;
+  document.getElementById("jpg3").src="http://image.tmdb.org/t/p/w185/"+response .results[13].poster_path;
 });
 //end of 2nd endpoint******
 
@@ -66,8 +65,8 @@ var settings = {
   $.ajax(settings).done(function (response) {
     console.log(response);
 
-    document.getElementById("jpg6").src=text+response .results[11].poster_path;
-    document.getElementById("jpg5").src=text+response .results[18].poster_path;
+    document.getElementById("jpg6").src="http://image.tmdb.org/t/p/w185/"+response .results[11].poster_path;
+    document.getElementById("jpg5").src="http://image.tmdb.org/t/p/w185/"+response .results[18].poster_path;
 
   });
   //end of 3rd endpoint*****
@@ -86,8 +85,8 @@ var settings = {
 $.ajax(settings).done(function (response) {
   console.log(response);
 
-  document.getElementById("jpg7").src=text+response .results[14].poster_path;
-  document.getElementById("jpg8").src=text+response .results[8].poster_path;
+  document.getElementById("jpg7").src="http://image.tmdb.org/t/p/w185/"+response .results[14].poster_path;
+  document.getElementById("jpg8").src="http://image.tmdb.org/t/p/w185/"+response .results[8].poster_path;
 
 });
 //end of 4th endpoint*****
@@ -104,10 +103,10 @@ function closeNav() {
 <div id="title" class="slide header" style="background-image: url(i1.jpg);">
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="Trending.html">Trending Movies</a>
-    <a href="Toprated.html">Top Rated Movies</a>
-    <a href="Nowplaying.html">Now Playing</a>
-    <a href="upcoming.html">Upcoming Movies</a>
+    <a href="#slide1">Trending Movies</a>
+    <a href="#slide2">Top Rated Movies</a>
+    <a href="#slide3">Now Playing</a>
+    <a href="#slide4">Upcoming Movies</a>
     <a href="#slide5">About Me</a>
   </div>
   <span style="font-size:30px;cursor:pointer;color: beige;"  onclick="openNav()">&#9776; open</span>
@@ -154,25 +153,8 @@ function closeNav() {
 </div>
 
  <div id="slide5"  class="slide header"style="background-image: url(i10.jpg);">
-  <div class="Adiv">
-    <h1 id="Ahead">About Me</h1>
-    <br>
-    
-    <p style="color: burlywood;">Hey Guys, My name is Pavit Kalra I am interested in IT and everything in its orbit. I recently began to be fascinated by web programming, e.g. developing apps and building websites. I am keen to gain more experience in the field. For this reason, I am looking for a company willing to offer me a placement among their developers. In return, I would offer my full commitment, and be a pleasant and friendly addition to your team.
-      I am therefore currently looking for a job or an internship as a front-end or a back-end developer.</p>
-  <div class="row">
-      <div class="column">
-        <a href="https://github.com/pavitkalra1" class="fa fa-github"></a>
-      </div>
-      <div class="column">
-        <a href="https://www.linkedin.com/in/pavitkalra/" class="fa fa-linkedin"></a>
-      </div>
-  </div>
-    
-    <a href="https://pavitkalra1.github.io."> <button class="glow-on-hover" type="button" style="font-size:20px ;">Click Me To See My Resume Website</button></a>
-   </div>
-   <p style="color: beige;"></p>
- 
+  
+ <a href="https://pavitkalra1.github.io."> <button class="glow-on-hover" type="button" style="font-size:20px ;">Click Me To See My Resume Website</button></a>
     
  </div>
 
