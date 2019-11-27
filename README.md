@@ -17,4 +17,4 @@
                 
                 Documentation: "https://developers.themoviedb.org/3";
                 
-                Live URL: "https://pavitkalra1.github.io/Assesment-Project/";
+                Live URL: "https://pavitkalra1.github.io/assessment-project/";
